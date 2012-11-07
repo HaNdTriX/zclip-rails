@@ -63,11 +63,6 @@ Add this in some required js file of your app:
   </thead>
   <tbody>
     <tr>
-      <td>path *</td>
-      <td>"ZeroClipboard.swf"</td>
-      <td>"path/to/ZeroClipboard.swf"</td>
-    </tr>
-    <tr>
       <td>copy *</td>
       <td>null</td>
       <td>any string, or any javascript expression or function that returns a string</td>
@@ -105,7 +100,7 @@ Add this in some required js file of your app:
 
 ### Notes
 
-#### proper CSS effects
+#### Proper CSS effects
 zClip is a flash overlay, so it must provide the target element with "hover" and "active" classes to simulate native :hover and :active states. Be sure to write your CSS as follows for best results:
 
     a:hover, a.hover {...}
@@ -164,9 +159,9 @@ Adobe Flash Flash Player versions 9 and 10 are supported.
 
 ## Credits
 
-* Thanks to [steamdev.com](http://www.steamdev.com/zclip/) for writing the jQuery wrapper.
-
 * Thanks to Joseph Huckaby for writing the zeroclipboard libary.
+
+* Thanks to [steamdev.com](http://www.steamdev.com/zclip/) for writing the jQuery wrapper.
 
 * Thanks to all the contributers to this Project.
 
