@@ -2,13 +2,12 @@
 require File.expand_path('../lib/zclip-rails/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Henrik Wenz"]
+  gem.authors       = ["Henrik Wenz", "Joseph Huckaby", "SteamDev"]
   gem.email         = ["handtrix@gmail.com"]
-  gem.description   = %q{Adds the Jquery zClip libary to Rails 3.x}
-  gem.summary       = %q{Adds the Jquery zClip libary to Rails 3.x}
-  gem.homepage      = ""
-
-  gem.files         = Dir["{lib,vendor}/**/*"] + ["MIT-LICENSE", "README.md"]
+  gem.description   = %q{Wrapper for jQuery - zClip (zeroclipboard). Adds easy copy to clipboard functionality to your Rails 3.x app}
+  gem.summary       = %q{Adds easy copy to clipboard functionality to your Rails 3.x app}
+  gem.homepage      = "https://github.com/HaNdTriX/zclip-rails"
+  gem.files         = Dir["{lib,vendor}/**/*"] + ["LICENSE", "README.md"]
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "zclip-rails"
