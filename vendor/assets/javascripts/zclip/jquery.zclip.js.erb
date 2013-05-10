@@ -22,13 +22,14 @@
 
             var settings = $.extend({
 
-                path: '<%= asset_path 'ZeroClipboard10.swf' %>',
+                path: '<%= asset_path 'ZeroClipboard.swf' %>',
                 copy: null,
                 beforeCopy: null,
                 afterCopy: null,
                 clickAfter: true,
                 setHandCursor: true,
-                setCSSEffects: true
+                mouseOver: null,
+                mouseOut: null,
 
             }, params);
       
@@ -38,9 +39,8 @@
                 var o = $(this);
 
                 if (o.is(':visible') && (typeof settings.copy == 'string' || $.isFunction(settings.copy))) {
+                    var clip = new ZeroClipboard( o, { moviePath: settings.path });
 
-                    ZeroClipboard.setMoviePath(settings.path);
-                    var clip = new ZeroClipboard.Client();
                     
                     if($.isFunction(settings.copy)){
                       o.bind('zClip_copy',settings.copy);
@@ -53,13 +53,14 @@
                     }                    
 
                     clip.setHandCursor(settings.setHandCursor);
-                    clip.setCSSEffects(settings.setCSSEffects);
-                    clip.addEventListener('mouseOver', function (client) {
-                        o.trigger('mouseenter');
-                    });
-                    clip.addEventListener('mouseOut', function (client) {
-                        o.trigger('mouseleave');
-                    });
+
+                    if($.isFunction(settings.mouseOver)){
+                      clip.on('mouseover', settings.mouseOver);
+                    }
+                    if($.isFunction(settings.mouseOut)){
+                      clip.on('mouseout', settings.mouseOut);
+                    }
+
                     clip.addEventListener('mouseDown', function (client) {
 
                         o.trigger('mousedown');
