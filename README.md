@@ -1,7 +1,7 @@
 # :warning: Author Warning :warning:
 
-I added this wrapper to give access to the zclip Jquery plugin. Nevertheless I can not recommend Zclip on complex projects.
-A better solution is to use the [zeroclipboard-rails](https://github.com/HaNdTriX/zeroclipboard-rails) gem in addition with this [script](https://github.com/HaNdTriX/zeroclipboard-rails/wiki/zeroclipboard-rails---jQuery-Examples).
+I added this wrapper to give access to the zclip Jquery plugin. Nevertheless I can not recommend Zclip.
+A better solution is to use the [zeroclipboard-rails](https://github.com/HaNdTriX/zeroclipboard-rails).
 
 # Zclip::Rails
 
